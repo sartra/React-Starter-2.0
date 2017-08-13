@@ -1,24 +1,39 @@
 const path = require('path');
 const webpack = require('webpack')
+const autoprefixer = require('autoprefixer')
 
 module.exports = {
   entry: './src/index.js',
   module: {
-    loaders: [
-       {
-         test: /\.js?$/,
-         loader: 'babel-loader',
-         exclude: /node_modules/
-       },
-       {
-        test: /\.scss$/,
-        loaders: [
-          require.resolve('style-loader'),
-          require.resolve('css-loader'),
-          require.resolve('sass-loader')
+    rules: [
+      {
+        test: /\.js?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.scss?$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+                plugins: function() {
+                    return [autoprefixer]
+                }
+            }
+          },
+          {
+            loader: 'sass-loader'
+          }
         ]
       }
-     ]
+    ]
   },
   output: {
     filename: 'bundle.js',
