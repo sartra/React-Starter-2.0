@@ -1,17 +1,16 @@
-var webpack = require('webpack')
-var path = require('path')
-var autoprefixer = require('autoprefixer')
+const path = require('path');
+const webpack = require('webpack')
 
 module.exports = {
-  entry: ['./src/index'],
+  entry: './src/index.js',
   module: {
     loaders: [
-      {
-        test: /\.js?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
-      },
-      {
+       {
+         test: /\.js?$/,
+         loader: 'babel-loader',
+         exclude: /node_modules/
+       },
+       {
         test: /\.scss$/,
         loaders: [
           require.resolve('style-loader'),
@@ -19,16 +18,15 @@ module.exports = {
           require.resolve('sass-loader')
         ]
       }
-    ]
-  },
-  resolve: {
-    extensions: ['.js', '.scss']
+     ]
   },
   output: {
-    path: path.join(__dirname, '/dist'),
-    publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
   },
+  resolve: {
+   extensions: ['.js', '.scss']
+ },
   devServer: {
     contentBase: './dist',
     hot: true,
