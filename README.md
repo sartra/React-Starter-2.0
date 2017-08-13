@@ -7,8 +7,8 @@ An easy React Starter Kit to get you up and running quickly. It includes the som
  - Webpack 2
  - Webpack Dev Server
  - Hot Reloading
- - SCSS Support
- - **Coming Soon**: Auto-prefixer support for your SCSS and CSS styles. Optional Redux Support
+ - PostCSS, Autoprefixer & SCSS 
+ - **Coming Soon**: Optional Redux 
 
 ## Installation ##
 
