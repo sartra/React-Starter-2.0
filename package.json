@@ -12,6 +12,7 @@
   },
   "author": "Daniel Zuzevich",
   "license": "ISC",
+  "browsersList": ["last 2 versions", "ie 10"],
   "dependencies": {
     "express": "^4.15.4",
     "react": "^15.6.1",

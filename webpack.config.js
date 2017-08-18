@@ -6,11 +6,13 @@ module.exports = {
   entry: './src/index.js',
   module: {
     rules: [
+      /* JS */
       {
         test: /\.js?$/,
         loader: 'babel-loader',
         exclude: /node_modules/
       },
+      /* SCSS */
       {
         test: /\.scss?$/,
         use: [
@@ -23,9 +25,9 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-                plugins: function() {
-                    return [autoprefixer]
-                }
+              config: {
+                  path: './config/postcss.config.js'
+              }
             }
           },
           {
