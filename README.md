@@ -8,7 +8,7 @@ An easy React Starter Kit to get you up and running quickly. It includes the som
  - Webpack Dev Server
  - Hot Reloading
  - PostCSS, Autoprefixer & SCSS 
- - **Coming Soon**: Optional Redux 
+ - Base Testing Setup for Jest and Enzyme
 
 ## Installation ##
 
