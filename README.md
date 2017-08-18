@@ -16,7 +16,8 @@ An easy React Starter Kit to get you up and running quickly. It includes the som
  2. `npm install`
 
  Upon very first installation, the postinstall command in the package.json will build a bundle.js file for you,
- and insert it into the dist folder.
+ and insert it into the dist folder. The components folder contains a few small sample components to show you
+ how things are connected together. Feel free to delete/modify the files as needed for your project.
 
 ## Running ##
 
