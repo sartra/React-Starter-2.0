@@ -12,9 +12,13 @@
   },
   "author": "Daniel Zuzevich",
   "license": "ISC",
-  "browsersList": ["last 2 versions", "ie 10"],
+  "browsersList": [
+    "last 2 versions",
+    "ie 10"
+  ],
   "dependencies": {
     "express": "^4.15.4",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.2"
