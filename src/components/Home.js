@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ButtonLink from './reusable/ButtonLink'
 
 export default class Home extends Component {
   render() {
@@ -6,8 +7,9 @@ export default class Home extends Component {
       <div className="home">
         <p>Welcome to React Brah. If you like this repo, please give me a follow on Github!</p>
 
-        <br />
-        <a href="/about">About Page</a>
+        <ButtonLink url="about">
+          About Page
+        </ButtonLink>
       </div>
     )
   }

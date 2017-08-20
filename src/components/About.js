@@ -1,12 +1,15 @@
 import React from 'react'
+import ButtonLink from './reusable/ButtonLink'
 
 const About = () => {
   return (
     <div className="about">
-      About Page
+      <p>About Page</p>
 
       <br />
-      <a href="/">Back To Home</a>
+      <ButtonLink url="/">
+        Back To Home
+      </ButtonLink>
     </div>
   )
 }
