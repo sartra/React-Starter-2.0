@@ -1,7 +1,7 @@
 {
   "name": "react-starter-2.0",
   "version": "2.0.0",
-  "description": "Get up and running quickly with this React Starter Kit. Express 4, Autoprefixer CSS/SCSS, React Router V4, Webpack 2, Hot-Reloading.",
+  "description": "Get up and running quickly with this React Starter Kit. Express 4, Autoprefixer CSS/SCSS, React Router V4, Webpack , Live Reload.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -13,7 +13,7 @@
   "author": "Daniel Zuzevich",
   "license": "ISC",
   "browsersList": [
-    "last 2 versions",
+    "last 3 versions",
     "ie 10"
   ],
   "dependencies": {
@@ -21,7 +21,10 @@
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-router-dom": "^4.1.2"
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

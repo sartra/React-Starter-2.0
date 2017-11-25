@@ -2,13 +2,13 @@
 ## React Starter 2.0 ##
 An easy React Starter Kit to get you up and running quickly. It includes the some of the latest and greatest:
 
- - Express 4
- - React Router 4
- - Webpack 2
- - Webpack Dev Server
- - Hot Reloading
- - PostCSS, Autoprefixer & SCSS
- - Base Testing Setup for Jest and Enzyme
+ - Express 4.
+ - React Router V4.
+ - Redux/Redux Thunk
+ - Webpack & Webpack Dev Server.
+ - Live Reloading.
+ - PostCSS, Autoprefixer and SCSS.
+ - Base Testing Setup for Jest and Enzyme.
 
 ## Installation ##
 
