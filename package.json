@@ -6,8 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "dev": "webpack-dev-server --hot --inline",
+    "altdev": "webpack --progress --colors --watch",
     "test": "jest --config ./config/jest-config.js",
-    "build": "webpack",
+    "prod": "webpack -p --config webpack.prod.config.js",
     "postinstall": "webpack"
   },
   "author": "Daniel Zuzevich",
@@ -17,6 +18,7 @@
     "ie 10"
   ],
   "dependencies": {
+    "axios": "^0.17.1",
     "express": "^4.15.4",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
