@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -15,25 +16,25 @@ module.exports = {
       /* SCSS */
       {
         test: /\.scss?$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              config: {
-                  path: './config/postcss.config.js'
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader'
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                config: {
+                    path: './config/postcss.config.js'
+                }
               }
+            },
+            {
+              loader: 'sass-loader'
             }
-          },
-          {
-            loader: 'sass-loader'
-          }
-        ]
+          ]
+        })
       }
     ]
   },
@@ -52,6 +53,7 @@ module.exports = {
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+    new ExtractTextPlugin('style.css')
   ]
 }
