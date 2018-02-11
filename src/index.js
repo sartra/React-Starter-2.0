@@ -5,8 +5,9 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import reducers from './reducers'
 import reduxThunk from 'redux-thunk'
+import logger from 'redux-logger'
 
-const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore)
+const createStoreWithMiddleware = applyMiddleware(reduxThunk, logger)(createStore)
 const store = createStoreWithMiddleware(reducers)
 
 import App from './components/App'

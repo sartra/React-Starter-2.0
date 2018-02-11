@@ -5,6 +5,12 @@ export default class App extends Component {
     super(props)
   }
 
+  componentWillMount = () => this.sayHi()
+  
+  sayHi = () => {
+    console.log('Hello, arrow functions are great.')
+  }
+
   render() {
     return (
       <div>
