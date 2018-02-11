@@ -26,9 +26,6 @@ An easy React Starter Kit to get you up and running quickly. It includes the som
 - `npm start` (Normal)
 - `npm run prod` (Prepare for production)
 
-You need to run `npm run build` to apply changes to your 'dist' folders bundle.js if you are not
-using the dev server.
-
 ## Testing ##
 
 1. `npm run test`
