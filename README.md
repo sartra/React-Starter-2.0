@@ -22,7 +22,7 @@ An easy React Starter Kit to get you up and running quickly. It includes the som
 ## Running ##
 
 - `npm run devHot` (Hot reload with webpack dev server)
-- `npm runDevWatch` (Continuously builds new bundle, but no hot reload/webpack dev server)
+- `npm run devWatch` (Continuously builds new bundle, but no hot reload/webpack dev server)
 - `npm start` (Normal)
 - `npm run prod` (Prepare for production)
 
