@@ -34,3 +34,6 @@ using the dev server.
 1. `npm run test`
 
 Check out how the sample test works, and then head to Jest and Enzyme documentation to learn how to use them.
+
+## Examples ##
+This boilerplate provides some great ES6 features and beyond right out of the box. I will update this section with code examples soon.
