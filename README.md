@@ -4,11 +4,12 @@ An easy React Starter Kit to get you up and running quickly. It includes the som
 
  - Express 4.
  - React Router V4.
- - Redux/Redux Thunk
+ - Redux/Redux Thunk & Redux Logger
  - Webpack & Webpack Dev Server.
  - Live Reloading.
  - PostCSS, Autoprefixer and SCSS.
- - Base Testing Setup for Jest and Enzyme.
+ - Testing Setup for Jest and Enzyme.
+ - Option .babelrc config to support using async await.
 
 ## Installation ##
 
@@ -16,13 +17,14 @@ An easy React Starter Kit to get you up and running quickly. It includes the som
  2. `npm install`
 
  Upon very first installation, the postinstall command in the package.json will build a bundle.js file for you,
- and insert it into the dist folder. The components folder contains a few small sample components to show you
- how things are connected together. Feel free to delete/modify the files as needed for your project.
+ and insert it into the dist folder.
 
 ## Running ##
 
-- `npm run dev` (Hot Reload Dev Environment)
+- `npm run devHot` (Hot reload with webpack dev server)
+- `npm runDevWatch` (Continuously builds new bundle, but no hot reload/webpack dev server)
 - `npm start` (Normal)
+- `npm run prod` (Prepare for production)
 
 You need to run `npm run build` to apply changes to your 'dist' folders bundle.js if you are not
 using the dev server.
