@@ -47,7 +47,7 @@ module.exports = {
     ]
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
@@ -63,7 +63,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor'
+      names: ['vendor', 'manifest']
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
