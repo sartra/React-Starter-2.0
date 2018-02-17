@@ -68,6 +68,5 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     })
-    /*new ExtractTextPlugin('style.css')*/
   ]
 }

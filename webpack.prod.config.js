@@ -14,7 +14,8 @@ config.plugins.push(
     compress: {
       warnings: false
     }
-  })
+  }),
+  new ExtractTextPlugin('style.css')
 );
 
 module.exports = config;
