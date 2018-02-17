@@ -1,10 +1,18 @@
 const path = require('path');
 const webpack = require('webpack')
-const autoprefixer = require('autoprefixer')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const VENDOR_LIBS = [
+  'axios', 'prop-types', 'react', 'react-dom', 'react-redux', 'react-router-dom',
+  'redux', 'redux-thunk', 'redux-logger'
+]
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    bundle: './src/index.js',
+    vendor: VENDOR_LIBS
+  },
   module: {
     rules: [
       /* JS */
@@ -39,7 +47,7 @@ module.exports = {
     ]
   },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
@@ -54,6 +62,12 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new ExtractTextPlugin('style.css')
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor'
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    })
+    /*new ExtractTextPlugin('style.css')*/
   ]
 }
