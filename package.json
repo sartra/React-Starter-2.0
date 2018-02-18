@@ -6,11 +6,12 @@
   "scripts": {
     "start": "node server.js",
     "devHot": "webpack-dev-server --hot --inline",
-    "devWatch": "webpack --progress --colors --watch",
+    "watch": "webpack --progress --colors --watch",
     "test": "jest --config ./config/jest-config.js",
-    "build": "webpack",
+    "build": "npm run clean && webpack",
     "prod": "webpack -p --config webpack.prod.config.js",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build",
+    "clean": "rimraf dist"
   },
   "author": "Daniel Zuzevich",
   "license": "ISC",
@@ -46,6 +47,7 @@
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
     "react-test-renderer": "^15.6.1",
+    "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.4",
