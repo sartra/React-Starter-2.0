@@ -1,4 +1,28 @@
 {
-  "presets": ["env", "react"],
-  "plugins": ["transform-object-rest-spread", "transform-class-properties"]
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "current" 
+      }
+    }],
+    "react"
+  ],
+  "plugins": [
+    [
+      "babel-plugin-root-import", [
+        {
+          "rootPathSuffix": "src"
+        }
+      ]
+    ],
+    [
+      "transform-runtime", {
+        "polyfill": false,
+        "regenerator": true
+      }
+    ],
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "transform-react-jsx-source"
+  ]
 }

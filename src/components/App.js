@@ -5,8 +5,8 @@ export default class App extends Component {
     super(props)
   }
 
-  componentWillMount = () => this.sayHi()
-  
+  componentDidMount = () => this.sayHi()
+
   sayHi = () => {
     console.log('Hello, arrow functions are great.')
   }

@@ -2,6 +2,15 @@ const path = require('path');
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
+// This will be globally accessible in your app and will change easily across environments
+const API_URL = {
+    production: JSON.stringify('https://regain.brainpower-api.com/api'),
+    development: JSON.stringify('https://regain-dev.brainpower-api.com/api')
+}
+
+const environment = process.env.NODE_ENV === 'production' ? 'production' : 'development';
 
 const VENDOR_LIBS = [
   'axios', 'prop-types', 'react', 'react-dom', 'react-redux', 'react-router-dom',
@@ -67,6 +76,10 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
+    }),
+    new webpack.DefinePlugin({
+      'API_URL': API_URL[environment]
     })
+    //new BundleAnalyzerPlugin() Uncomment if youd like to visually inspect the size of your bundles
   ]
 }
