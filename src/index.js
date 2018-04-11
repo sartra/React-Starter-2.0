@@ -5,7 +5,11 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import reducers from './reducers'
 import reduxThunk from 'redux-thunk'
-import logger from 'redux-logger'
+
+import { createLogger } from 'redux-logger'
+const logger = createLogger({
+  collapsed: true
+})
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk, logger)(createStore)
 const store = createStoreWithMiddleware(reducers)
