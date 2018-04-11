@@ -14,7 +14,7 @@ const logger = createLogger({
 const createStoreWithMiddleware = applyMiddleware(reduxThunk, logger)(createStore)
 const store = createStoreWithMiddleware(reducers)
 
-import App from './components/App'
+import App from './components/app'
 
 ReactDOM.render (
   <Provider store={store}>
