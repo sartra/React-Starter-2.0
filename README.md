@@ -41,3 +41,6 @@ Just use:
 `import Example from '~/'`
 
 and babel-plugin-root-import will make sure that your always starting from the top level of the 'src' directory.
+
+### Webpack Bundle Analyzer ###
+Just uncomment it at the bottom of the webpack.config.js file, and you can visually inspect your bundles by module.
