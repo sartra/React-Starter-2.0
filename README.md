@@ -5,6 +5,7 @@ An easy React Starter Kit to get you up and running quickly. It includes the som
  - React Fiber
  - React Router V4.
  - Redux, Redux Thunk & Redux Logger
+ - Support for Async Await
  - Webpack & Webpack Dev Server.
  - Live Reloading.
  - PostCSS, Autoprefixer and SCSS.
